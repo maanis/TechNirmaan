@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 20% 98%;
+    --foreground: 240 10% 10%;
+    --background: 240 20% 98%;
+    --foreground: 240 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+
+    /* --primary: 250 95% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 10%; */
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 60% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 190 95% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 250 95% 62%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(250, 95%, 62%),
+      hsl(280, 85%, 58%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(190, 95%, 50%),
+      hsl(220, 90%, 56%)
+    );
+    --gradient-success: linear-gradient(
+      135deg,
+      hsl(142, 76%, 36%),
+      hsl(160, 70%, 42%)
+    );
+
+    --shadow-card: 0 4px 20px -2px hsl(240 10% 10% / 0.08);
+    --shadow-glow: 0 0 40px hsl(250 95% 62% / 0.15);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 250 95% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 250 95% 62%;
+
+    --card-bg: #ffffff;
+    --dot-color: rgba(0, 0, 0, 0.15);
+    --dot-size: 18px;
+    --dot-opacity: 0.6;
+    --dot-glow: rgba(0, 0, 0, 0.15);
+    --vignette: rgba(135, 135, 135, 0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 8% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    /* --primary: 250 95% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 18%;
+    --secondary-foreground: 0 0% 98%; */
+
+    --primary: 195 100% 50%;
+    --primary-foreground: 220 40% 6%;
+
+    --secondary: 270 60% 60%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 5% 18%;
+    --muted-foreground: 240 5% 64%;
+
+    --accent: 190 95% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 240 5% 18%;
+    --input: 240 5% 18%;
+    --ring: 250 95% 62%;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(250, 95%, 62%),
+      hsl(280, 85%, 58%)
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(190, 95%, 50%),
+      hsl(220, 90%, 56%)
+    );
+    --gradient-success: linear-gradient(
+      135deg,
+      hsl(142, 76%, 36%),
+      hsl(160, 70%, 42%)
+    );
+
+    --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(250 95% 62% / 0.25);
+
+    --sidebar-background: 240 8% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 250 95% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 18%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 5% 18%;
+    --sidebar-ring: 250 95% 62%;
+
+    --card-bg: #111010;
+    --dot-color: rgba(255, 255, 255, 0.28);
+    --dot-size: 16px;
+    --dot-opacity: 1;
+    --dot-glow: rgba(255, 255, 255, 0.4);
+    --vignette: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+
+  .fade-mask {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Base card (same for both modes) */
+  .stat-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: var(--card-bg);
+  }
+
+  /* Glow dots + grid */
+  .stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+    background-size: var(--dot-size) var(--dot-size);
+    opacity: var(--dot-opacity);
+    filter: drop-shadow(0 0 4px var(--dot-glow));
+    pointer-events: none;
+  }
+
+  /* Vignette effect */
+  .stat-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at center,
+      transparent 40%,
+      var(--vignette) 100%
+    );
+    pointer-events: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(240 20% 98%), hsl(240 20% 92%));
+    position: relative;
+  }
+
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, hsl(240 10% 8%), hsl(240 10% 12%));
+  }
+}
+
+/* ============================================================
+   PERFORMANCE & MOBILE SCROLL OPTIMIZATIONS
+   ============================================================ */
+
+/* Smooth momentum scrolling on iOS — without this, iOS scrolls feel janky */
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent layout thrashing from touch scroll delays on mobile */
+* {
+  touch-action: pan-y;
+}
+
+/* Buttons and interactive elements — restore tap action */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Eliminate 300ms tap delay on mobile browsers */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* GPU-promote elements that animate — keeps them on compositor thread */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* For reduced-motion users: kill ALL transitions and animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Prevent text from causing layout shifts during font load */
+body {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+}
+
+/* Mobile: reduce blur intensity (backdrop-filter is expensive on low-end phones) */
+@media (max-width: 768px) {
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px);
+  }
+  .backdrop-blur-md {
+    backdrop-filter: blur(4px);
+  }
+  /* Disable glow orb animations on mobile — they cause frame drops */
+  .animate-pulse {
+    animation: none;
+  }
+}
