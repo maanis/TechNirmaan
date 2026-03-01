@@ -97,7 +97,7 @@ export default function ProjectsSection() {
                                     <div className="space-y-3 mb-12">
                                         <h4 className="text-xs font-semibold text-neutral-900 dark:text-white uppercase tracking-wider">Core Technologies</h4>
                                         <ul className="flex flex-col gap-2">
-                                            {['Raspberry Pi / Microcontrollers', 'Conversational AI (LLM)', 'Speech-to-Text & TTS', 'Servo Motor Control'].map((tech) => (
+                                            {['Raspberry Pi / Microcontrollers', 'Conversational AI (LLM)', 'Speech-to-Text & TTS', 'Arduino uno car'].map((tech) => (
                                                 <li key={tech} className="text-sm text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
                                                     <span className="w-1 h-1 rounded-full bg-blue-500"></span>
                                                     {tech}
