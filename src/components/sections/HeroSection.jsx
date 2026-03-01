@@ -56,14 +56,14 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
             <Link
               href="/compiler"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent text-white hover:opacity-90 rounded-full px-6 py-2 sm:py-2 text-sm sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent text-white hover:opacity-90 rounded-md px-6 py-2 sm:py-2 text-sm sm:text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
-              <Sparkles className="w-5 h-5" aria-hidden="true" />
+              {/* <Sparkles className="w-5 h-5" aria-hidden="true" /> */}
               Start Coding
             </Link>
             <Link
               href="#features"
-              className="inline-flex items-center gap-2 bg-card hover:bg-card/80 text-card-foreground rounded-full px-8 py-2 sm:py-2 text-sm sm:text-lg font-semibold shadow-lg border border-border"
+              className="inline-flex items-center gap-2 bg-card hover:bg-card/80 text-card-foreground rounded-md px-8 py-2 sm:py-2 text-sm sm:text-lg font-semibold shadow-lg border border-border"
             >
               Learn More
             </Link>

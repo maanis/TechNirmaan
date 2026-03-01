@@ -1,8 +1,9 @@
 import React from 'react';
+// import '../app/globals.css'; // Import global styles for the font
 
 export default function GradientHighlight({ children, className = "" }) {
     return (
-        <span className={`relative inline-block whitespace-nowrap px-2 ${className}`}>
+        <span className={`relative inline-block whitespace-nowrap px-2 font-noto-serif ${className}`}>
             {/* Background Broken Paper Effect */}
             <span
                 className="absolute -top-[3px] -bottom-[3px] -left-2 -right-2 -z-10 block bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300"
@@ -13,7 +14,7 @@ export default function GradientHighlight({ children, className = "" }) {
                 aria-hidden="true"
             />
             {/* Foreground Text */}
-            <span className="relative z-10 text-white dark:text-neutral-950 font-bold">
+            <span className="relative z-10 font-noto-serif text-white dark:text-neutral-950 font-bold">
                 {children}
             </span>
         </span>

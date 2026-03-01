@@ -23,7 +23,7 @@ export default function CTASection() {
           {/* Clean Typography with Gradient Accent */}
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-neutral-900 dark:text-white">
             Build the future with <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
+            <span className="text-transparent  bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
               TechNirmaan.
             </span>
           </h2>

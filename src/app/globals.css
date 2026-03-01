@@ -6,6 +6,8 @@
 All colors MUST be HSL.
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 @layer base {
   :root {
     --background: 240 20% 98%;
@@ -322,5 +324,17 @@ body {
   /* Disable glow orb animations on mobile — they cause frame drops */
   .animate-pulse {
     animation: none;
+  }
+}
+
+@layer base {
+  * {
+    @apply font-sans;
+  }
+}
+
+@layer base {
+  .font-noto-serif {
+    font-family: 'Noto Serif', serif;
   }
 }
